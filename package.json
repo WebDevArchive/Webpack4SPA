@@ -1,0 +1,37 @@
+{
+  "name": "es6-webpack-template",
+  "version": "0.0.1",
+  "description": "Start template: es6-modules + webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build & npm run server",
+    "build": "rm -rf app/dist && node ./scripts/build",
+    "server": "node ./scripts/server",
+    "watch": "echo \"--- Watch\" && webpack --config ./scripts/webpack.config.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WebDevArchive/es6-webpack-template.git"
+  },
+  "keywords": [
+    "javascript",
+    "es6",
+    "modules",
+    "webpack",
+    "build",
+    "template"
+  ],
+  "author": "Stas <stas.webwork@gmail.com>, WebDevArchive — http://vk.com/webdevarchive",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebDevArchive/es6-webpack-template/issues"
+  },
+  "homepage": "https://github.com/WebDevArchive/es6-webpack-template",
+  "devDependencies": {
+    "babel-loader": "^5.0.0",
+    "html-webpack-plugin": "^1.3.0",
+    "webpack": "^1.9.5",
+    "webpack-dev-server": "^1.8.2"
+  }
+}
