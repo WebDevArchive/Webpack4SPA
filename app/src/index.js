@@ -1,3 +1,4 @@
+require("./index.css");
 import moduleA from './modules/moduleA/moduleA.js';
 
 var objA = new moduleA({

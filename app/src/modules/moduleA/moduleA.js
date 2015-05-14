@@ -1,3 +1,4 @@
+require("./moduleA.css");
 import moduleB from './../moduleB/moduleB.js';
 
 class moduleA {

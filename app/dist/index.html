@@ -1,19 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>es6-webpack-template</title>
+	<meta charset="UTF-8">
+	<title>es6-webpack-template</title>
+	<meta description="Start template: es6-modules + webpack">
+	
+	<link href="index/index.css" rel="stylesheet">
+	<link href="vendor/vendor.css" rel="stylesheet">
 </head>
 <body>
-	<div id="root">
-		<p style="background:#eee; padding:8px 12px; display:inline-block">
-			<em>Look in console:</em>
-			<strong>ctrl + shift + i</strong>
-		</p>
-
+	<header>
 		<h1>es6-webpack-template</h1>
-		<p>Start template: es6-modules + webpack</p>
-	</div>
-	<script src="index.js"></script>
+		<p class="description"></p>
+	</header>
+	<main>
+		<section>
+			<h2>devDependencies:</h2>
+			<ul>
+				<li><strong>babel-loader</strong>: ^5.0.0</li>
+				<li><strong>css-loader</strong>: ^0.12.1</li>
+				<li><strong>extract-text-webpack-plugin</strong>: ^0.8.0</li>
+				<li><strong>html-webpack-plugin</strong>: ^1.3.0</li>
+				<li><strong>style-loader</strong>: ^0.12.2</li>
+				<li><strong>webpack</strong>: ^1.9.5</li>
+				<li><strong>webpack-dev-server</strong>: ^1.8.2</li>
+			</ul>
+		</section>
+	</main>
+	<footer>
+
+	</footer>
+	
+	<script src="index/index.js"></script>
+	<script src="vendor/vendor.js"></script>
+	<!-- es6-webpack-template v0.0.1 -->
+	<!-- 15.5.2015  -->
 </body>
 </html>

@@ -1,3 +1,5 @@
+require("./moduleB.css");
+
 class moduleB {
     constructor(options) {
         this.param1 = options.param1;
