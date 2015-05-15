@@ -39,11 +39,19 @@ module.exports = {
 				test: /\.css$/,
 				loader: ExtractTextPlugin.extract("style-loader", "css-loader")
 			},
+			{
+				test: /\.hbs$/,
+				loader: 'handlebars-loader'
+			},
+			{
+				test: /\.json$/,
+				loader: 'json-loader'
+			},
 //			{ test: /\.css$/, loader: "style-loader!css-loader" },
 		]
 	},
 	plugins: [
-//		new webpack.optimize.UglifyJsPlugin(),
+		new webpack.optimize.UglifyJsPlugin(),
 //		new HtmlWebpackPlugin({
 //			template: './app/src/index.html'
 //	    }),

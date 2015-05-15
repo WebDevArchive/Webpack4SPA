@@ -1,11 +1,19 @@
 require("./index.css");
-import moduleA from './modules/moduleA/moduleA.js';
+import jsonInfoSection from './modules/jsonInfoSection/jsonInfoSection.js';
 
-var objA = new moduleA({
-	param1: 'John',
-	param2: 23
+var devDependencies = new jsonInfoSection({
+	title: 'devDependencies:',
+	rootElement: document.getElementById('devDependencies'),
+	jsonFile: './package.json',
+	jsonField: 'devDependencies'
 });
-
-console.log(
-	objA.run('A')
-);
+/*
+var keywords = new jsonInfoSection({
+	title: 'keywords:',
+	rootElement: document.getElementById('keywords'),
+	jsonFile: './package.json',
+	jsonField: 'keywords'
+});
+*/
+devDependencies.render();
+//keywords.render();
