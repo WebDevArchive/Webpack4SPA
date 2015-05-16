@@ -1,0 +1,16 @@
+<section>
+{{#each this}}
+	{{#ifObject this}}
+	<h2>{{@key}}</h2>
+	<ul>
+    	{{#each this}}
+	    <li><strong>{{@key}}</strong>: {{this}}</li>
+    	{{/each}}
+	</ul>
+	{{else}}
+	<h2>{{@key}}</h2>
+	<p>{{this}}</p>
+	{{/ifObject}}
+{{/each}}
+
+</section>

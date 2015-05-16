@@ -1,19 +1,17 @@
 require("./index.css");
-import jsonInfoSection from './modules/jsonInfoSection/jsonInfoSection.js';
+import packageJsonSection from './modules/packageJsonSection/packageJsonSection.js';
 
-var devDependencies = new jsonInfoSection({
+var description = new packageJsonSection({
+	title: 'description:',
+	rootElement: document.getElementById('description'),
+	jsonSection: 'description'
+});
+
+var devDependencies = new packageJsonSection({
 	title: 'devDependencies:',
 	rootElement: document.getElementById('devDependencies'),
-	jsonFile: './package.json',
-	jsonField: 'devDependencies'
+	jsonSection: 'devDependencies'
 });
-/*
-var keywords = new jsonInfoSection({
-	title: 'keywords:',
-	rootElement: document.getElementById('keywords'),
-	jsonFile: './package.json',
-	jsonField: 'keywords'
-});
-*/
+
+description.render();
 devDependencies.render();
-//keywords.render();
