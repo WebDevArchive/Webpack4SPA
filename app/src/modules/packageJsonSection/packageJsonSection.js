@@ -10,12 +10,9 @@ class packageJsonSection {
     }
     render () {
       var jsonSection = this.packageJson.getSection(this.jsonSection);
-      console.log(jsonSection);
-      console.log('#################');
       var hbs = require('./packageJsonSection.hbs');
       var sectionHtml = hbs(jsonSection);
       this.rootElement.innerHTML = sectionHtml;
-      console.log('@@@@@@@@@@@@@@@@@');
     }
 }
 

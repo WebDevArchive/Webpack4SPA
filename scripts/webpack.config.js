@@ -3,6 +3,7 @@ var path = require("path");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var pkg = require('./../package.json');
+var handlebars = require('handlebars');
 
 module.exports = {
 	context: path.resolve("./app/src"),
@@ -17,7 +18,6 @@ module.exports = {
         path: path.resolve("./app/dist"),
         filename: "[name]/[name].js"
     },
-	debug: true,
 	module: {
     	loaders: [
 			{
@@ -25,11 +25,6 @@ module.exports = {
         		exclude: /node_modules/,
 				loaders: ['babel-loader'],
 			},
-//			{
-//		        test: /\.css$/,
-//        		exclude: /node_modules/,
-//				loaders: ['style-loader', 'css-loader'],
-//			}
 			{
 				test: /\.css$/,
 				loader: ExtractTextPlugin.extract("style-loader", "css-loader")
@@ -39,7 +34,8 @@ module.exports = {
 				loader: 'handlebars-loader',
 				query: {
 					helperDirs: [
-						__dirname + "/hbshelpers"
+						"/hbshelpers"
+//						__dirname + "/hbshelpers"
 					]
 				}
 			},
@@ -47,7 +43,6 @@ module.exports = {
 				test: /\.json$/,
 				loader: 'json-loader'
 			},
-//			{ test: /\.css$/, loader: "style-loader!css-loader" },
 		]
 	},
 	plugins: [
@@ -55,18 +50,27 @@ module.exports = {
 //		new HtmlWebpackPlugin({
 //			template: './app/src/index.html'
 //	    }),
-//		new ExtractTextPlugin("index.css", {
-//            allChunks: true
-//        }),
 		new ExtractTextPlugin("[name]/[name].css", {
-
         }),
-
+/*
 	    new HtmlWebpackPlugin({
-	    	template: './app/src/index.html',
+	    	template: './app/src/index.hbs',
 	    	title: pkg.name,
 	    	pkg: pkg,
 		})
+*/
+
+		new HtmlWebpackPlugin({
+			title: pkg.name,
+	    	pkg: pkg,
+		    templateContent: function(templateParams, webpackCompiler) {
+//      			var hbs = require(path.resolve('./app/src/index.hbs'));
+      			var hbs = require('./../app/src/index.hbs');
+      			return hbs(templateParams);
+    		}
+  		})
 
 	],
 };
+
+console.log(path.resolve(__dirname + "/hbshelpers"));
