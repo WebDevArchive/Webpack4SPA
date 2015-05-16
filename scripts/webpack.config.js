@@ -34,8 +34,8 @@ module.exports = {
 				loader: 'handlebars-loader',
 				query: {
 					helperDirs: [
-						"/hbshelpers"
-//						__dirname + "/hbshelpers"
+//						"/hbshelpers"
+						__dirname + "/hbshelpers"
 					]
 				}
 			},
@@ -46,7 +46,7 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new webpack.optimize.UglifyJsPlugin(),
+//		new webpack.optimize.UglifyJsPlugin(),
 //		new HtmlWebpackPlugin({
 //			template: './app/src/index.html'
 //	    }),
@@ -64,13 +64,11 @@ module.exports = {
 			title: pkg.name,
 	    	pkg: pkg,
 		    templateContent: function(templateParams, webpackCompiler) {
-//      			var hbs = require(path.resolve('./app/src/index.hbs'));
-      			var hbs = require('./../app/src/index.hbs');
+      			var hbs = require(path.resolve('./app/src/index.hbs'));
+//      			var hbs = require('./../app/src/index.hbs');
       			return hbs(templateParams);
     		}
   		})
 
 	],
 };
-
-console.log(path.resolve(__dirname + "/hbshelpers"));

@@ -8,13 +8,11 @@
 	<link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet">{% } %}
 </head>
 <body>
-DATEFORMAT INDEX: {{formatDate 'now'}}
 	<header>
-		<h1>{%=o.htmlWebpackPlugin.options.title || 'Title'%}</h1>
+		<h1>{{htmlWebpackPlugin.options.title}}</h1>
 		<p class="description"></p>
 	</header>
 	<main>
-	Title: {{htmlWebpackPlugin.options.title}}<br>
 		<div id="description"></div>
 		<div id="devDependencies"></div>
 	</main>
