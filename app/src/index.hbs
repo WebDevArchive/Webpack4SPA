@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>{%=o.htmlWebpackPlugin.options.title%}</title>
+	<meta description="{%=o.htmlWebpackPlugin.options.pkg.description%}">
+	{% for (var css in o.htmlWebpackPlugin.files.css) { %}
+	<link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet">{% } %}
+</head>
+<body>
+<div class="root">
+	<header>
+		<h1>{{htmlWebpackPlugin.options.title}}</h1>
+	</header>
+	<main>
+		<div id="description"></div>
+		<div id="devDependencies"></div>
+	</main>
+	<footer>
+		<div id="Github:">
+			<a href="https://github.com/WebDevArchive/es6-webpack-template" target="_blank">https://github.com/WebDevArchive/es6-webpack-template</a>
+		</div>
+	</footer>
+	{% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
+	<script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>{% } %}
+</div>
+<!-- {%= o.htmlWebpackPlugin.options.pkg.name + ' v' + o.htmlWebpackPlugin.options.pkg.version %} -->
+<!-- {% var d = new Date(); print(d.getDate() + "." + (d.getMonth() + 1) + "." + d.getFullYear() + ' '); %} -->
+</body>
+</html>

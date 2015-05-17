@@ -1,0 +1,8 @@
+.packageJsonSection li {
+	list-style:none;
+}
+
+.packageJsonSection li:before {
+	content: '— ';
+}
+

@@ -1,0 +1,29 @@
+{
+  "name": "es6-webpack-template",
+  "version": "0.0.1",
+  "homepage": "https://github.com/WebDevArchive/es6-webpack-template",
+  "authors": [
+    "Stas <stas.webwork@gmail.com>, WebDevArchive — http://vk.com/webdevarchive"
+  ],
+  "description": "Start template: es6-modules + webpack",
+  "main": "index.js",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "javascript",
+    "es6",
+    "modules",
+    "webpack",
+    "build",
+    "template"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
