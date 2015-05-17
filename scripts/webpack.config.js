@@ -34,7 +34,6 @@ module.exports = {
 				loader: 'handlebars-loader',
 				query: {
 					helperDirs: [
-//						"/hbshelpers"
 						__dirname + "/hbshelpers"
 					]
 				}
@@ -46,26 +45,15 @@ module.exports = {
 		]
 	},
 	plugins: [
-//		new webpack.optimize.UglifyJsPlugin(),
-//		new HtmlWebpackPlugin({
-//			template: './app/src/index.html'
-//	    }),
-		new ExtractTextPlugin("[name]/[name].css", {
-        }),
-/*
-	    new HtmlWebpackPlugin({
-	    	template: './app/src/index.hbs',
-	    	title: pkg.name,
-	    	pkg: pkg,
-		})
-*/
+		new webpack.optimize.UglifyJsPlugin(),
+
+		new ExtractTextPlugin("[name]/[name].css", {}),
 
 		new HtmlWebpackPlugin({
 			title: pkg.name,
 	    	pkg: pkg,
 		    templateContent: function(templateParams, webpackCompiler) {
       			var hbs = require(path.resolve('./app/src/index.hbs'));
-//      			var hbs = require('./../app/src/index.hbs');
       			return hbs(templateParams);
     		}
   		})

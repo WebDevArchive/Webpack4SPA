@@ -8,6 +8,7 @@
     "build": "rm -rf app/dist && node ./scripts/build",
     "server": "node ./scripts/server",
     "watch": "webpack --config ./scripts/webpack.config.js --watch",
+    "deploy": "git subtree push --prefix app/dist origin gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,1 +1,8 @@
-header {background:#eee;}
+.packageJsonSection li {
+	list-style:none;
+}
+
+.packageJsonSection li:before {
+	content: '— ';
+}
+

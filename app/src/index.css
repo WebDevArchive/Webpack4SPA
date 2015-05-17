@@ -1,0 +1,17 @@
+body{
+	text-align:center;
+	color:#777;
+}
+
+.root {
+	text-align:left;
+	display:inline-block;
+}
+
+header h1 {
+	background:#eee;
+	padding:6px 9px;
+}
+
+a {color:#000;}
+a:hover{text-decoration:none;}
