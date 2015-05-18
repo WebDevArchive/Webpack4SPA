@@ -1,1 +1,1 @@
-!function(r){function t(o){if(e[o])return e[o].exports;var n=e[o]={exports:{},id:o,loaded:!1};return r[o].call(n.exports,n,n.exports,t),n.loaded=!0,n.exports}var e={};return t.m=r,t.c=e,t.p="",t(0)}([function(r,t,e){"use strict"}]);
+!function(r){function o(t){if(e[t])return e[t].exports;var n=e[t]={exports:{},id:t,loaded:!1};return r[t].call(n.exports,n,n.exports,o),n.loaded=!0,n.exports}var e={};return o.m=r,o.c=e,o.p="",o(0)}([function(r,o,e){"use strict";console.log("from vendor")}]);

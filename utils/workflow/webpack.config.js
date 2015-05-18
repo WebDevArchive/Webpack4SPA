@@ -8,7 +8,7 @@ var handlebars = require('handlebars');
 module.exports = {
 	context: path.resolve("./app/src"),
     entry: {
-    	vendor: path.resolve('./app/src/vendor.js'),
+    	vendor: path.resolve('./app/src/vendor/vendor.js'),
 		index: path.resolve('./app/src/index.js'),
 	},
     output: {
