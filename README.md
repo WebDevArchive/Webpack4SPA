@@ -1,6 +1,7 @@
 # es6-webpack-template
 Start template: es6-modules + webpack<br>
-## devDependencies:
+
+## devDependencies [![devDependency Status](https://david-dm.org/WebDevArchive/es6-webpack-template/dev-status.svg)](https://david-dm.org/WebDevArchive/es6-webpack-template#info=devDependencies)
 * "**babel-loader**": "^5.0.0",
 * "**css-loader**": "^0.12.1",
 * "**extract-text-webpack-plugin**": "^0.8.0",
@@ -12,19 +13,19 @@ Start template: es6-modules + webpack<br>
 * "**webpack**": "^1.9.5",
 * "**webpack-dev-server**": "^1.8.2"
 
-## Install:
+## Install
 `npm install` — for devDependencies ("**node_modules**").
 
-## Bower:
+## Bower
 `bower install` — see .bowerrc: vendors in "**./app/src/vendor/**".
 
-## Commands:
+## Commands
 * `npm start` — run build and start dev-server for "**dist**".
 * `npm run build` — remove "**app/dist**" folder & run build for production.
 * `npm run watch` — run watching (build).
 * `npm run server` — run server: [http://localhost:8008/webpack-dev-server/](http://localhost:8008/webpack-dev-server/)
 * `npm run deploy` — deploy "app/dist" to gh-pages.
 
-## Contact:
+## Contact
 **Email**: stas.webwork@gmail.com<br>
 **WebDevArchive**: http://vk.com/webdevarchive
