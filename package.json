@@ -1,0 +1,48 @@
+{
+  "name": "Webpack4SPA",
+  "version": "0.0.2",
+  "description": "Minimalistic Starter-kit for building SPA with Webpack.",
+  "scripts": {
+    "build": "rm -rf app/build && node ./npm_scripts/webpack/build.js",
+    "dev": "rm -rf app/build && node ./npm_scripts/webpack/dev.js",
+    "test": "node ./app/test/test-example.js",
+    "postinstall": "node ./npm_scripts/install/chrome-driver.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WebDevArchive/Webpack4ChromeExtension.git"
+  },
+  "keywords": [
+    "webpack",
+    "boilerplate",
+    "template",
+    "starter kit",
+    "hmr",
+    "hot module replacement",
+    "watch",
+    "es6"
+  ],
+  "author": "Stas404: stas.webwork@gmail.com, WebDevArchive: http://vk.com/webdevarchive",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebDevArchive/Webpack4SPA/issues"
+  },
+  "homepage": "https://github.com/WebDevArchive/Webpack4SPA",
+  "devDependencies": {
+    "adm-zip": "^0.4.7",
+    "babel-core": "^6.4.0",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.4",
+    "html-webpack-plugin": "^2.8.1",
+    "node-notifier": "^4.5.0",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "selenium-webdriver": "^2.52.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.10",
+    "webpack-dev-server": "1.14.0"
+  }
+}

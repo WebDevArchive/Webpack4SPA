@@ -1,0 +1,13 @@
+@import './../globals.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header, footer {
+	color: $color;
+	background: $background;
+	padding: $padding;
+	text-align:center;
+}

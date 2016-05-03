@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title><%= htmlWebpackPlugin.options.PackageJson.name %></title>
+	<meta description="<%= htmlWebpackPlugin.options.PackageJson.description %>">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<% for (var css in htmlWebpackPlugin.files.css) { %>
+		<link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet" type="text/css">
+	<% } %>
+</head>
+<body>
+	<header>
+		<h1><%= htmlWebpackPlugin.options.PackageJson.name %> v<%= htmlWebpackPlugin.options.PackageJson.version %></h1>
+		<p><%= htmlWebpackPlugin.options.PackageJson.description %></p>
+	</header>
+	<main>
+		<pre><%= JSON.stringify(htmlWebpackPlugin.options.PackageJson, null, 4) %></pre>
+	</main>
+	<footer>
+		<p>Github: <a target="_blank" href="<%= htmlWebpackPlugin.options.PackageJson.homepage %>"><%= htmlWebpackPlugin.options.PackageJson.homepage %></a></p>
+	</footer>
+
+	<% for (var chunk in htmlWebpackPlugin.files.js) { %>
+		<script src="<%= htmlWebpackPlugin.files.js[chunk] %>"></script>
+	<% } %>
+</body>
+</html>
